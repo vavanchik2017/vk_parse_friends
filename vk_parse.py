@@ -18,7 +18,7 @@ resp = vk.friends.get (user_id=usid, order='name') #Входящие парам�
 if resp['items'] and resp['count']:
     output= open("friends"+usid+".txt","w",encoding="utf-8") #Создание файла для результатов
     for i in range(0,(resp['count'])):
-        frnds ="\n vk.com/"+str(resp['items'][z]) #Собираем ссылки
+        frnds ="\n vk.com/id"+str(resp['items'][z]) #Собираем ссылки
         output.write(frnds)
         z= z + 1
     output.close()
